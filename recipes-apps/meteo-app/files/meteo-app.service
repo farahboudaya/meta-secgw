@@ -1,0 +1,12 @@
+[Unit]
+Description=Application de mesure SecGW (capteur simule)
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/meteo-app
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
+
