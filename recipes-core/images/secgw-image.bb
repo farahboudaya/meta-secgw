@@ -2,9 +2,14 @@ SUMMARY = "Image securisee SecGW"
 DESCRIPTION = "Image minimale durcie pour la passerelle SecGW"
 LICENSE = "MIT"
 
-inherit core-image
+inherit image
 
-IMAGE_INSTALL:append = " os-release"
 IMAGE_FEATURES += "ssh-server-dropbear"
-IMAGE_INSTALL:append = " meteo-app"
-IMAGE_INSTALL:append = " systemd-analyze"
+
+IMAGE_INSTALL = " \
+    packagegroup-core-boot \
+    os-release \
+    systemd-analyze \
+    meteo-app \
+
+
