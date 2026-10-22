@@ -7,3 +7,4 @@ inherit core-image
 IMAGE_INSTALL:append = " os-release"
 IMAGE_FEATURES += "ssh-server-dropbear"
 IMAGE_INSTALL:append = " meteo-app"
+IMAGE_INSTALL:append = " systemd-analyze"
