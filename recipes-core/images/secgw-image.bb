@@ -4,12 +4,10 @@ LICENSE = "MIT"
 
 inherit image
 
-IMAGE_FEATURES += "ssh-server-dropbear"
-
 IMAGE_INSTALL = " \
     packagegroup-core-boot \
     os-release \
+    dropbear \
     systemd-analyze \
     meteo-app \
-
-
+"
