@@ -1,17 +1,8 @@
-
+# Exemple de local.conf pour construire secgw-image
 MACHINE ??= "qemux86-64"
 DISTRO = "secgw"
 CONF_VERSION = "2"
 
-
+# Limiter la charge (adapter au nombre de coeurs)
 BB_NUMBER_THREADS = "3"
 PARALLEL_MAKE = "-j 3"
-
-# Tests automatiques : pas de KVM
-IMAGE_CLASSES += "testimage"
-TEST_SUITES = "ping ssh systemd"
-TEST_RUNQEMUPARAMS = "nographic slirp"
-QEMU_USE_KVM = "False"
-
-# DEV/TEST UNIQUEMENT : root sans mot de passe, a retirer en production
-EXTRA_IMAGE_FEATURES ?= "debug-tweaks"
