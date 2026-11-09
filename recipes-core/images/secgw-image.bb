@@ -10,5 +10,14 @@ IMAGE_INSTALL = " \
     os-release \
     dropbear \
     systemd-analyze \
-    meteo-app \
+    secgw-gateway \
+"
+IMAGE_INSTALL = " \
+    packagegroup-core-boot \
+    os-release \
+    dropbear \
+    systemd-analyze \
+    secgw-gateway \
+    can-utils \
+    iproute2 \
 "
