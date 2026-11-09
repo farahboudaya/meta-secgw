@@ -12,8 +12,3 @@ IMAGE_INSTALL = " \
     systemd-analyze \
     meteo-app \
 "
-secgw_manifest() {
-    cd ${IMAGE_ROOTFS}
-    sha256sum usr/bin/meteo-app > ${IMAGE_ROOTFS}${sysconfdir}/secgw-manifest.sha256
-}
-ROOTFS_POSTPROCESS_COMMAND += "secgw_manifest;"
